@@ -6,6 +6,35 @@ The list of operations include:
 - JSON parsing
 - String utilities (trimming, masking sensitive data)
 - Number utilities (rounding, formatting, random number generator)
+  - Addition                       ✔️
+  - Subtraction                    ✔️
+  - Multiplication                 ✔️
+  - Division                       ✔️
+  - Modulus                        ✔️
+  - Absolute value                 ✔️
+  - Power/exponentiation           ✔️
+  - Square root                    ✔️
+  - Cube root                      ✔️
+  - Rounding (up, down, nearest)
+  - Ceiling and floor
+  - Min and max
+  - Average/mean                   ✔️
+  - Median                         ✔️
+  - Range
+  - Random number
+  - Factorial
+  - Prime check
+  - Even or odd check              ✔️
+  - Positive or negative check     ✔️
+  - Digit counter
+  - Number comparison
+  - Sum of digits
+  - Reverse digits
+  - Palindrome number checker
+  - Fibonacci sequence generator
+  - Percentage calculator
+  - Parsing String to number safely
+  - Formatting numbers (e.g. decimal places)
 - Collections utilities
 - Null safe handling (Optional wrappers, default values, null-to-empty)
 - File & IO utilities (read files like text, json, csv)
