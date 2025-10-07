@@ -15,25 +15,25 @@ The list of operations include:
   - Power/exponentiation           ✔️
   - Square root                    ✔️
   - Cube root                      ✔️
-  - Rounding (up, down, nearest)
-  - Ceiling and floor
-  - Min and max
+  - Rounding (up, down, nearest)   ✔️
+  - Ceiling and floor              ✔️
+  - Min and max                    ✔️
   - Average/mean                   ✔️
   - Median                         ✔️
   - Range
-  - Random number
+  - Random number                  ✔️
   - Factorial
   - Prime check
   - Even or odd check              ✔️
   - Positive or negative check     ✔️
   - Digit counter
   - Number comparison
-  - Sum of digits
+  - Sum of digits                  ✔️
   - Reverse digits
   - Palindrome number checker
   - Fibonacci sequence generator
-  - Percentage calculator
-  - Parsing String to number safely
+  - Percentage calculator          ✔️
+  - Parsing String to num safely
   - Formatting numbers (e.g. decimal places)
 - Collections utilities
 - Null safe handling (Optional wrappers, default values, null-to-empty)

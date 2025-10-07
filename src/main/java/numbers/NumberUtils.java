@@ -1,6 +1,5 @@
 package main.java.numbers;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class NumberUtils {
@@ -50,12 +49,12 @@ public class NumberUtils {
     }
 
     // modulus
-    public static double calculateModulus(double num1, double num2) {
+    public static double modulus(double num1, double num2) {
         return num1 % num2;
     }
 
     // average
-    public static double calculateAvg(double[] numbers) {
+    public static double average(double[] numbers) {
         double result = 0;
         for (double number : numbers) {
             result += number;
@@ -64,7 +63,7 @@ public class NumberUtils {
     }
 
     // median
-    public static double calculateMedian(double[] numbers) {
+    public static double median(double[] numbers) {
         /* sort the array
         get the number of items in the array
         if the count is odd, the middle item is the median
@@ -80,16 +79,72 @@ public class NumberUtils {
     }
 
     // absolute number
-    public static int getAbsoluteNumber(int number) {
+    public static int absolute(int number) {
         return number >= 0 ? number : number * -1;
     }
 
     // exponentiation
-    public static int calculatePower(int base, int exponent) {
+    public static int power(int base, int exponent) {
         int result = 1;
         for (int i = 0; i < exponent; i++) {
             result = result * base;
         }
         return result;
+    }
+
+    // sum
+    public static int sum(int[] numbers) {
+        int result = 0;
+        for (int num : numbers) {
+            result += num;
+        }
+        return result;
+    }
+
+    // percentage
+    public static double percentage(double num1, double num2) {
+        return (num1 / num2) * 100;
+    }
+
+    // rounding
+    public static double round(double num) {
+        return Math.round((double) num);
+    }
+
+    // ceil
+    public static double ceil(double num) {
+        return Math.ceil(num);
+    }
+
+    // floor
+    public static double floor(double num) {
+        return Math.floor(num);
+    }
+
+    // max number in an array
+    public static int max(int[] numbers) {
+        int max = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+        }
+        return max;
+    }
+
+    // min number in an array
+    public static int min(int[] numbers) {
+        int min = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+        return min;
+    }
+
+    // generate random number
+    public static double random() {
+        return Math.random();
     }
 }
