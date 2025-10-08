@@ -20,21 +20,19 @@ The list of operations include:
   - Min and max                    ✔️
   - Average/mean                   ✔️
   - Median                         ✔️
-  - Range
+  - Range                          ✔️
   - Random number                  ✔️
-  - Factorial
-  - Prime check
+  - Factorial                      ✔️
+  - Prime check                    ✔️
   - Even or odd check              ✔️
   - Positive or negative check     ✔️
-  - Digit counter
-  - Number comparison
+  - Digit counter                  ✔️
+  - Number comparison              ✔️
   - Sum of digits                  ✔️
-  - Reverse digits
-  - Palindrome number checker
-  - Fibonacci sequence generator
+  - Reverse array                  ✔️
+  - Palindrome number checker      ✔️
   - Percentage calculator          ✔️
-  - Parsing String to num safely
-  - Formatting numbers (e.g. decimal places)
+  - Parsing String to num safely   ✔️
 - Collections utilities
 - Null safe handling (Optional wrappers, default values, null-to-empty)
 - File & IO utilities (read files like text, json, csv)

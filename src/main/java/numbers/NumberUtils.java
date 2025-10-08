@@ -147,4 +147,91 @@ public class NumberUtils {
     public static double random() {
         return Math.random();
     }
+
+    // factorial
+    public static int factorial(int number) {
+        int result = 1;
+        for(int i = number; i > 0; i--) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // range
+    public static int range(int[] numbers) {
+        int num1 = numbers[0];
+        int num2 = numbers[0];
+        for(int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > num1) {
+                num1 = numbers[i];
+            }
+            if (numbers[i] < num2) {
+                num2 = numbers[i];
+            }
+        }
+        return num1 - num2;
+    }
+
+    // digit counter - how many digits a number has
+    public static int count(int num) {
+        // convert to a String then get the length
+        return String.valueOf(num).length();
+    }
+
+    // reverse digits
+    public static String reverse(int[] numbers) {
+        int[] reverseNumbers = new int[numbers.length];
+        System.out.println(Arrays.toString(numbers));
+
+        for (int i = numbers.length - 1, j = 0; i >= 0; i--, j++) {
+            reverseNumbers[j] = numbers[i];
+        }
+        return Arrays.toString(reverseNumbers);
+    }
+
+    // palindrome checker
+    // palindrome is a number that reads the same forward and backward
+    public static boolean palindrome(int num) {
+        int original = num;
+        int reversed = 0;
+        while(num != 0) {
+            int digit = num % 10;               // get last digit
+            reversed = reversed * 10 + digit;   // build reversed number
+            num /= 10;                          // remove last digit
+        }
+        return original == reversed;
+    }
+
+    // prime number checker
+    public static boolean isPrime(int num) {
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+
+    // comparisons
+    public static int compare(int a, int b) {
+        return Integer.compare(a, b);
+    }
+
+    public static boolean isGreater(int a, int b) {
+        return a > b;
+    }
+
+    public static boolean isLess(int a, int b) {
+        return a < b;
+    }
+
+    public static boolean isEqual(int a, int b) {
+        return a == b;
+    }
+
+    public static Integer parseInt(String value) {
+        try {
+            return Integer.parseInt(value);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("text is invalid input!");
+        }
+    }
 }
