@@ -6,7 +6,7 @@ public class NumberUtils {
 
     // addition
     public static double add(double num1, double num2) {
-        return num1 + num1;
+        return num1 + num2;
     }
 
     // subtraction
@@ -29,8 +29,8 @@ public class NumberUtils {
     }
 
     // square root
-    public static double sequareRoot(double num) {
-        return num * num;
+    public static double squareRoot(double num) {
+        return Math.sqrt(num);
     }
 
     // cube root
@@ -69,12 +69,13 @@ public class NumberUtils {
         if the count is odd, the middle item is the median
         if the count is even, the middle is the average of the two middle numbers
          */
-        Arrays.sort(numbers);
-        int count = numbers.length;
+        double[] numbersCopy = Arrays.copyOf(numbers, numbers.length);
+        Arrays.sort(numbersCopy);
+        int count = numbersCopy.length;
         if (count % 2 == 0) {
-            return ((numbers[count / 2 - 1]) + (numbers[count / 2])) / 2;
+            return ((numbersCopy[count / 2 - 1]) + (numbersCopy[count / 2])) / 2;
         } else {
-            return numbers[count / 2];
+            return numbersCopy[count / 2];
         }
     }
 
@@ -108,7 +109,7 @@ public class NumberUtils {
 
     // rounding
     public static double round(double num) {
-        return Math.round((double) num);
+        return Math.round(num);
     }
 
     // ceil
@@ -161,12 +162,13 @@ public class NumberUtils {
     public static int range(int[] numbers) {
         int num1 = numbers[0];
         int num2 = numbers[0];
-        for(int i = 0; i < numbers.length; i++) {
-            if (numbers[i] > num1) {
-                num1 = numbers[i];
+        int[] numbersCopy = Arrays.copyOf(numbers, numbers.length);
+        for (int number : numbersCopy) {
+            if (number > num1) {
+                num1 = number;
             }
-            if (numbers[i] < num2) {
-                num2 = numbers[i];
+            if (number < num2) {
+                num2 = number;
             }
         }
         return num1 - num2;
@@ -179,7 +181,7 @@ public class NumberUtils {
     }
 
     // reverse digits
-    public static String reverse(int[] numbers) {
+    public static String reverseArray(int[] numbers) {
         int[] reverseNumbers = new int[numbers.length];
         System.out.println(Arrays.toString(numbers));
 
@@ -204,6 +206,7 @@ public class NumberUtils {
 
     // prime number checker
     public static boolean isPrime(int num) {
+        if (num <= 1) return false;
         for (int i = 2; i < num; i++) {
             if (num % i == 0) return false;
         }
