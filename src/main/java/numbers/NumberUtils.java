@@ -1,12 +1,20 @@
 package main.java.numbers;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class NumberUtils {
+
+    private NumberUtils() {}
 
     // addition
     public static double add(double num1, double num2) {
         return num1 + num2;
+    }
+
+    public static BigDecimal add(BigDecimal num1, BigDecimal num2) {
+        return num1.add(num2);
     }
 
     // subtraction
@@ -14,15 +22,31 @@ public class NumberUtils {
         return num1 - num2;
     }
 
+    public static BigDecimal subtract(BigDecimal num1, BigDecimal num2) {
+        return num1.subtract(num2);
+    }
+
     // multiplication
     public static double multiply(double num1, double num2) {
         return num1 * num2;
+    }
+
+    public static BigDecimal multiply(BigDecimal num1, BigDecimal num2) {
+        return num1.multiply(num2);
     }
 
     // division
     public static double divide(double num1, double num2) {
         if (num2 != 0) {
             return num1 / num2;
+        } else {
+            throw new ArithmeticException("Cannot perform this operation!");
+        }
+    }
+
+    public static BigDecimal divide(BigDecimal num1, BigDecimal num2) {
+        if (Objects.nonNull(num2)) {
+            return num1.divide(num2);
         } else {
             throw new ArithmeticException("Cannot perform this operation!");
         }
